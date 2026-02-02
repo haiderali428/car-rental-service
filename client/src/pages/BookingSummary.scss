@@ -1,0 +1,103 @@
+
+@use "sass:color";
+
+/* Ensure whole page background is white */
+body {
+  background: #ffffff !important;
+}
+
+/* Booking summary container */
+.booking-summary {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.6s ease-in-out;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #222;
+
+  h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: #111;
+    text-align: center;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+    color: #e50914; // Highlighted in theme red
+    text-align: center;
+  }
+
+  .summary-details {
+    text-align: left;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    margin-bottom: 2rem;
+
+    p {
+      font-size: 1.1rem;
+      margin: 0.8rem 0;
+      color: #444;
+      display: flex;
+      justify-content: space-between;
+
+      strong {
+        color: #000;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .total {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    color: #111;
+    text-align: right;
+  }
+
+  .payment-btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2.5rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #fff;
+    background: #e50914; // Red theme
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+&:hover {
+  background: color.adjust(#e50914, $lightness: -8%); // ✅ modern replacement
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(229, 9, 20, 0.4);
+}
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: 0 3px 10px rgba(229, 9, 20, 0.3);
+    }
+  }
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

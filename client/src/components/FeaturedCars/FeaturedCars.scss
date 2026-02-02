@@ -1,0 +1,373 @@
+
+.featured-cars {
+  padding: 2rem;
+  background: #fff;
+  text-align: center;
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+
+  button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    .icon-circle {
+      width: 60px;
+      height: 60px;
+      background: #f1f1f1;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 0.5rem;
+      transition: background 0.3s ease;
+
+      img {
+        width: 28px;
+        height: 28px;
+      }
+    }
+
+    span {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #333;
+    }
+
+    &.active .icon-circle,
+    &:hover .icon-circle {
+      background: red;
+
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    &.active span,
+    &:hover span {
+      color: red;
+    }
+  }
+}
+
+
+  .car-list {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .car-card {
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    h3 {
+      margin: 0.8rem 0 0.4rem;
+      font-size: 1.2rem;
+      color: #000;
+    }
+
+    p {
+      color: red;
+      font-weight: bold;
+    }
+  }
+
+  .car-modal {
+    position: fixed;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+
+    .modal-content {
+      background: #fff;
+      display: flex;
+      max-width: 1000px;
+      width: 90%;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      padding: 2rem;
+
+      .close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: red;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+      }
+
+      .modal-left, .modal-right {
+        flex: 1;
+        padding: 1rem;
+      }
+
+      .image-slider {
+        position: relative;
+
+        img {
+          width: 100%;
+          border-radius: 8px;
+          height: 240px;
+          object-fit: cover;
+        }
+
+        .slider-controls {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          right: 0;
+          display: flex;
+          justify-content: space-between;
+          transform: translateY(-50%);
+
+          button {
+            background: red;
+            color: white;
+            border: none;
+            font-size: 1.5rem;
+            padding: 0.4rem 0.8rem;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .features, .details {
+        text-align: left;
+        margin: 1rem 0;
+
+        li {
+          margin: 0.4rem 0;
+          color: #000;
+        }
+      }
+
+      .book-btn {
+        padding: 0.8rem 2rem;
+        background: red;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 8px;
+        margin-top: 1.5rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: darkred;
+        }
+      }
+    }
+  }
+}                       
+.typewriter-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  text-align: center;
+  padding-left: 300px;
+  animation: typing 2s steps(20, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 1000px }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+.text-filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+
+  button {
+    background: transparent;
+    border: 2px solid red;
+    color: red;
+    font-weight: bold;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+
+    &:hover,
+    &.active {
+      background: red;
+      color: #fff;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .featured-cars {
+    padding: 1.5rem;
+
+    .filter-buttons {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .car-list {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .car-modal .modal-content {
+      flex-direction: column;
+
+      .modal-left,
+      .modal-right {
+        padding: 1rem 0;
+      }
+
+      .image-slider img {
+        height: 200px;
+      }
+
+      .book-btn {
+        width: 100%;
+      }
+    }
+  }
+
+  .typewriter-title {
+    font-size: 2.2rem;
+    padding-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .text-filter-buttons {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-cars {
+    padding: 1rem;
+
+    .filter-buttons {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      button {
+        flex-direction: row;
+        gap: 0.5rem;
+        justify-content: flex-start;
+        width: 100%;
+
+        .icon-circle {
+          width: 50px;
+          height: 50px;
+
+          img {
+            width: 24px;
+            height: 24px;
+          }
+        }
+
+        span {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .car-list {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .car-card {
+      padding: 0.8rem;
+
+      img {
+        height: 140px;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+    }
+
+    .car-modal .modal-content {
+      padding: 1rem;
+      width: 95%;
+
+      .image-slider img {
+        height: 180px;
+      }
+
+      .book-btn {
+        font-size: 1rem;
+        padding: 0.6rem 1.2rem;
+      }
+    }
+  }
+
+  .typewriter-title {
+    font-size: 1.3rem;
+    padding-right: 22rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .text-filter-buttons {
+    flex-direction: column;
+    align-items: center;
+
+    button {
+      width: 90%;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.contact-us {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 4rem 2rem;
+  color: #fff;
+
+  &__overlay {
+    background: rgba(0, 0, 0, 0.7); // Dark overlay for professional look
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__container {
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  &__subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #ddd;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__row {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+
+    input {
+      flex: 1;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.9);
+      color: #000;
+      font-size: 1rem;
+      outline: none;
+    }
+  }
+
+  textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    font-size: 1rem;
+    outline: none;
+    resize: none;
+  }
+
+  &__button {
+    background: #ff4c4c;
+    padding: 0.9rem 2rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #e33b3b;
+      transform: translateY(-2px);
+    }
+  }
+}

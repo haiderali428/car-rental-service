@@ -1,0 +1,72 @@
+.how-it-works {
+  background: #fff;
+  padding: 5rem 2rem;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #000;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+  }
+
+  .intro-text {
+    max-width: 650px;
+    margin: 0 auto 3rem auto;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .step-card {
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      color: #000;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .step-number {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      color: rgb(44, 44, 44);
+      font-weight: bold;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+  }
+}

@@ -1,0 +1,90 @@
+// ====== GLOBAL SCSS RESET & BASE STYLES ======
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  // COLORS
+  --primary-color: #e63946;       // Accent color (you can change)
+  --background-color: #0f0f0f;    // Dark background
+  --text-color: #ffffff;
+  --secondary-color: #1d1d1d;
+  --light-gray: #d1d1d1;
+
+  // FONT SIZES
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 20px;
+  --font-xl: 28px;
+  --font-xxl: 36px;
+
+  // SPACING
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+
+  // CONTAINER WIDTHS
+  --max-width: 1200px;
+  --nav-height: 70px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: var(--font-md);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+// ====== BUTTON STYLES ======
+.button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: var(--font-md);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #ff5252;
+  }
+}
+
+// ====== RESPONSIVE BREAKPOINTS ======
+$mobile: 480px;
+$tablet: 768px;
+$laptop: 1024px;
+
+// Example usage:
+// @media (max-width: $tablet) { ... }

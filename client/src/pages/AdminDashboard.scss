@@ -1,0 +1,88 @@
+.admin-dashboard {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #111;
+  min-height: 100vh;
+  animation: fadeIn 0.3s ease-in-out;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111;
+    border-left: 6px solid #e50914;
+    padding-left: 12px;
+    margin-bottom: 1.5rem;
+  }
+
+  .actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    button {
+      padding: 0.8rem 1.4rem;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+
+      &:nth-child(1) {
+        background: #e50914;
+        color: #fff;
+        &:hover {
+          background: #b20710;
+          transform: translateY(-2px);
+          box-shadow: 0 6px 14px rgba(229, 9, 20, 0.3);
+        }
+      }
+
+      &:nth-child(2) {
+        background: #111;
+        color: #fff;
+        &:hover {
+          background: #333;
+          transform: translateY(-2px);
+          box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+        }
+      }
+
+      &:nth-child(3) {
+        background: transparent;
+        color: #e50914;
+        border: 2px solid #e50914;
+        &:hover {
+          background: #e50914;
+          color: #fff;
+          transform: translateY(-2px);
+          box-shadow: 0 6px 14px rgba(229, 9, 20, 0.3);
+        }
+      }
+    }
+  }
+
+  p {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.5;
+    strong {
+      color: #e50914;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

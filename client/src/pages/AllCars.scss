@@ -1,0 +1,70 @@
+.all-cars {
+  background-color: #fff;
+  padding: 2rem;
+  min-height: 100vh;
+
+  .page-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #030303;
+  }
+  .page-description{
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  .text-filter-buttons {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    button {
+      background-color: transparent;
+      border: 2px solid #ff2828;
+      color: #ff0a0a;
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      border-radius: 20px;
+      font-size: 1rem;
+      cursor: pointer;  
+      transition: all 0.3s ease;
+
+      &.active {
+        background-color: #ff1100;
+        color: #fff;
+      }
+
+      &:hover {
+        background-color: #ff0000;
+        color: #fff;
+      }
+    }
+  }
+
+  .car-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
+
+    @media (max-width: 1400px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .error {
+    text-align: center;
+    color: red;
+    font-weight: bold;
+  }
+}

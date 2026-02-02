@@ -1,0 +1,110 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url('../assets/ChatGPT Image Aug 1, 2025, 05_37_09 AM.png') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); // dark overlay for contrast
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  &__content {
+    color: #fff;
+    max-width: 600px;
+    animation: fadeIn 1.5s ease forwards;
+
+    .hero__title {
+      font-size: 3.5rem;
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .hero__subtitle {
+      font-size: 1.5rem;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 2rem;
+    }
+
+    .hero__button {
+      padding: 0.8rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: white;
+      background-color: #ff4d4f;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #e60000;
+      }
+    }
+  }
+
+  // Tablet screens (768px to 1024px)
+  @media (max-width: 1024px) {
+    &__content {
+      .hero__title {
+        font-size: 2.8rem;
+      }
+
+      .hero__subtitle {
+        font-size: 1.3rem;
+      }
+
+      .hero__button {
+        font-size: 1rem;
+        padding: 0.7rem 1.8rem;
+      }
+    }
+  }
+
+  // Mobile screens (up to 768px)
+  @media (max-width: 768px) {
+    justify-content: center;
+
+    &__overlay {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      padding: 0 1.5rem;
+    }
+
+    &__content {
+      .hero__title {
+        font-size: 2rem;
+      }
+
+      .hero__subtitle {
+        font-size: 1rem;
+      }
+
+      .hero__button {
+        font-size: 0.95rem;
+        padding: 0.6rem 1.5rem;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
